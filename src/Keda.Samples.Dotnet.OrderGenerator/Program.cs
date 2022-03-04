@@ -9,8 +9,8 @@ namespace Keda.Samples.Dotnet.OrderGenerator
 {
     class Program
     {
-        private const string QueueName = "<queue-connection-string>";
-        private const string ConnectionString = "<queue-name>";
+        private static readonly string QueueName = Environment.GetEnvironmentVariable("SERVICE_BUS_QUEUE_NAME") ?? "orders";
+        private static readonly string ConnectionString = Environment.GetEnvironmentVariable("SERVICE_BUS_CONN_STRING");
 
         static async Task Main(string[] args)
         {

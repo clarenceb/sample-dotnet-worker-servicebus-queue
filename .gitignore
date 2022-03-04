@@ -329,3 +329,6 @@ ASALocalRun/
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
 /src/docker-compose.override.yml
+
+# KEDA sample
+*auth.json
